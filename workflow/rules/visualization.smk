@@ -4,6 +4,6 @@ rule visualize_gene_expression:
     output:
         plot="plots/gene_expression_barplot.png"
     conda:
-        "workflow/envs/env.yaml"
+        "/envs/env.yaml"
     script:
-        "workflow/scripts/visualize_gene_expression.py"
+        "/scripts/visualize_gene_expression.py"
