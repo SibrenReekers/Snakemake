@@ -85,7 +85,7 @@ As a quick note the pipeline takes a accesion number as input, on the current co
 To execute the workflow, run the following command:
 
 ```sh
-snakemake --snakefile workflow/Snakefile --cores <number_of_cores>
+snakemake -c <number_of_cores> --use-conda --conda-frontend conda
 ```
 ## Graphical view of the pipeline
 ![Workflow DAG](dag.png)
