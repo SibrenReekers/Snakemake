@@ -6,7 +6,7 @@ rule download_ref_files:
     log:
         "logs/download_ref_files.log"
     conda:
-        "../envs/env.yaml"
+        "/envs/env.yaml"
     shell:
         """
         curl -o {output.fasta} {config[genome_fasta_url]} > {log} 2>&1
@@ -20,7 +20,7 @@ rule decompress_genome_fasta:
     output:
         config['genome_fasta']
     conda:
-        "../envs/env.yaml"
+        "/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
 
@@ -31,6 +31,6 @@ rule decompress_gtf_annotation:
     output:
         config['gtf_annotation']
     conda:
-        "../envs/env.yaml"
+        "/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
