@@ -14,7 +14,7 @@ rule run_featurecounts:
         "logs/featurecounts/{sample}.log"
     params:
         strand="0",  # Adjust based on your library: '0' (unstranded), '1' (stranded), '2' (reverse stranded)
-        extra="-O --fracOverlap 0.2 -J -p"  # Additional parameters: -O (count multi-overlapping reads), -J (output read counts per junction)
+        extra="-O --fracOverlap 0.2 -J -p"  
     threads: 4
     conda:
         "../envs/env.yaml"
