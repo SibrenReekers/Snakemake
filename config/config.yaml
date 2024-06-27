@@ -11,6 +11,3 @@ gtf_annotation_url: "ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/rel
 read_length: 100
 threads_index: 4
 
-
-use-conda: True
-conda-frontend: conda
