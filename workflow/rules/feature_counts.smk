@@ -16,7 +16,5 @@ rule run_featurecounts:
         strand="0",  # Adjust based on your library: '0' (unstranded), '1' (stranded), '2' (reverse stranded)
         extra="-O --fracOverlap 0.2 -J -p"  # Additional parameters: -O (count multi-overlapping reads), -J (output read counts per junction)
     threads: 4
-    conda:
-        "workflow/envs/env.yaml"
     wrapper:
         "v3.13.1/bio/subread/featurecounts"
