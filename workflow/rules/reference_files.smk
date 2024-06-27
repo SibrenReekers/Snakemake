@@ -1,5 +1,3 @@
-# rules/reference_files.smk
-
 # Rule for downloading the reference genome and annotation
 rule download_ref_files:
     output:
@@ -7,6 +5,8 @@ rule download_ref_files:
         gtf=config['gtf_annotation_gz']
     log:
         "logs/download_ref_files.log"
+    conda:
+        "workflow/envs/env.yaml"
     shell:
         """
         curl -o {output.fasta} {config[genome_fasta_url]} > {log} 2>&1
@@ -19,6 +19,8 @@ rule decompress_genome_fasta:
         config['genome_fasta_gz']
     output:
         config['genome_fasta']
+    conda:
+        "workflow/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
 
@@ -28,5 +30,7 @@ rule decompress_gtf_annotation:
         config['gtf_annotation_gz']
     output:
         config['gtf_annotation']
+    conda:
+        "workflow/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
