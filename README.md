@@ -6,6 +6,23 @@ This repository contains an RNA-seq data processing workflow using Snakemake. Th
 
 The structure of the repository is as follows:
 
+```sh
+├── FastQC
+├── config
+│   └── config.yaml
+├── data
+├── images
+│   └── dag.png
+├── logs
+├── slurm
+│   └── config.yaml
+├── sra_ids.txt
+└── workflow
+    ├── Snakefile
+    ├── rules
+    └── scripts
+```
+
 
 ## Pipeline steps
 
