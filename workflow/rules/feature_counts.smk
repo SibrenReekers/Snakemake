@@ -17,6 +17,6 @@ rule run_featurecounts:
         extra="-O --fracOverlap 0.2 -J -p"  
     threads: 4
     conda:
-        "/envs/env.yaml"
+        "../envs/env.yaml"
     wrapper:
         "v3.13.1/bio/subread/featurecounts"
