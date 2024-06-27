@@ -69,18 +69,7 @@ As a quick note the pipeline takes a accesion number as input, on the current co
     ```sh
     conda install -c bioconda snakemake
     ```
-4. **Install Snakemake wrapper utils:**
-
-    ```sh
-    pip install snakemake_wrapper_utils
-    ```
-5. **Install sra-tools:**
-
-    ```sh
-    conda install -c bioconda sra-tools
-    ```
-
-3. **Configure the `config.yaml` file:**
+4. **Configure the `config.yaml` file:**
 
     Edit the `config/config.yaml` file to set the appropriate datapaths and parameters for your specific dataset and reference genome.
     Add extra accession numbers for a more expanded run
