@@ -58,16 +58,26 @@ As a quick note the pipeline takes a accesion number as input, on the current co
     conda create -n snakemake_env
     ```
 
-3. **Activate the conda virtual environment:**
+2. **Activate the conda virtual environment:**
    
     ```sh
     conda activate snakemake_env
     ``` 
 
-2. **Install Snakemake:**
+3. **Install Snakemake:**
 
     ```sh
     conda install -c bioconda snakemake
+    ```
+4. **Install Snakemake wrapper utils:**
+
+    ```sh
+    pip install snakemake_wrapper_utils
+    ```
+5. **Install sra-tools:**
+
+    ```sh
+    conda install -c bioconda sra-tools
     ```
 
 3. **Configure the `config.yaml` file:**
