@@ -9,7 +9,7 @@ rule get_fastq_pe_gz:
         extra="--skip-technical"
     threads: 30
     conda:
-        "workflow/envs/env.yaml"
+        "../envs/env.yaml"
     wrapper:
         "v3.5.3/bio/sra-tools/fasterq-dump"
 
@@ -26,6 +26,6 @@ rule run_fastqc:
     resources:
         mem_mb=1024
     conda:
-        "workflow/envs/env.yaml"
+        "../envs/env.yaml"
     wrapper:
         "v3.5.3/bio/fastqc"
