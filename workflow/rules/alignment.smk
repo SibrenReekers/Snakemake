@@ -4,8 +4,6 @@ rule decompress_fastq:
         "data/pe/{sample}_{read}.fastq.gz"
     output:
         "data/pe/{sample}_{read}.fastq"
-    conda:
-        "workflow/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
 
@@ -15,12 +13,10 @@ rule generate_star_index:
         fasta=config['genome_fasta'],
         gtf=config['gtf_annotation']
     output:
-        directory("data/refs/star_index/Genome")
+        "data/refs/star_index/Genome"
     log:
         "logs/generate_star_index.log"
     threads: config['threads_index']
-    conda:
-        "workflow/envs/env.yaml"
     wrapper:
         "v3.5.3/bio/star/index"
 
@@ -40,7 +36,5 @@ rule star_alignment:
     threads: 6
     params:
         extra="--outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM GeneCounts"
-    conda:
-        "workflow/envs/env.yaml"
     wrapper:
         "v3.6.0/bio/star/align"
