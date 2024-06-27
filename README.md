@@ -92,7 +92,7 @@ To execute the workflow, run the following command:
 snakemake --snakefile workflow/Snakefile --cores <number_of_cores>
 ```
 ## Graphical view of the pipeline
-![Workflow DAG](images/dag.png)
+![Workflow DAG](dag.png)
 
 ## Example output
 Because of how timeconsuming this pipeline can be it is currently set up to use one sample.
