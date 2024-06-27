@@ -5,7 +5,7 @@ rule decompress_fastq:
     output:
         "data/pe/{sample}_{read}.fastq"
     conda:
-        "workflow/envs/main_env.yaml"
+        "workflow/envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
 
@@ -20,7 +20,7 @@ rule generate_star_index:
         "logs/generate_star_index.log"
     threads: config['threads_index']
     conda:
-        "workflow/envs/main_env.yaml"
+        "workflow/envs/env.yaml"
     wrapper:
         "v3.5.3/bio/star/index"
 
