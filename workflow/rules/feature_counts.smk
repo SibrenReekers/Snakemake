@@ -15,7 +15,7 @@ rule run_featurecounts:
     params:
         strand="0",
         extra="-O --fracOverlap 0.2 -J -p"  
-    threads: 4
+    threads: config['threads_index']
     conda:
         "../envs/env.yaml"
     wrapper:
