@@ -7,7 +7,7 @@ rule get_fastq_pe_gz:
         "logs/pe/{accession}.gz.log"
     params:
         extra="--skip-technical"
-    threads: 30
+    threads: config['threads_index']
     conda:
         "../envs/env.yaml"
     wrapper:
@@ -22,7 +22,7 @@ rule run_fastqc:
         zip="FastQC/{sample}_{read}_fastqc.zip"
     log:
         "logs/fastqc/{sample}_{read}_fastqc.log"
-    threads: 6
+    threads: config['threads_index']
     resources:
         mem_mb=1024
     conda:
