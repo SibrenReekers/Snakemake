@@ -37,7 +37,7 @@ rule star_alignment:
         unmapped=["aligned/{sample}/unmapped_1.fastq.gz","aligned/{sample}/unmapped_2.fastq.gz"],
     log:
         "logs/star_alignment/{sample}.log"
-    threads: 6
+    threads: config['threads_index']
     params:
         extra="--outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM GeneCounts"
     conda:
