@@ -15,7 +15,7 @@ rule generate_star_index:
         fasta=config['genome_fasta'],
         gtf=config['gtf_annotation']
     output:
-        "data/refs/star_index/Genome"
+        directory("data/refs/star_index/Genome")
     log:
         "logs/generate_star_index.log"
     threads: config['threads_index']

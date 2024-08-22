@@ -6,4 +6,4 @@ rule visualize_gene_expression:
     conda:
         "../envs/env.yaml"
     script:
-        "/scripts/visualize_gene_expression.py"
+        "../scripts/visualize_gene_expression.py"
