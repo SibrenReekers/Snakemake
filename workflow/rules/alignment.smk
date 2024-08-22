@@ -19,10 +19,8 @@ rule generate_star_index:
     log:
         "logs/generate_star_index.log"
     threads: config['threads_index']
-    conda:
-        "../envs/env.yaml"
     wrapper:
-        "v3.5.3/bio/star/index"
+        "v4.1.1/bio/star/index"
 
 # Rule for STAR alignment using the wrapper
 rule star_alignment:
@@ -40,7 +38,5 @@ rule star_alignment:
     threads: config['threads_index']
     params:
         extra="--outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM GeneCounts"
-    conda:
-        "../envs/env.yaml"
     wrapper:
-        "v3.6.0/bio/star/align"
+        "v4.1.1/bio/star/align"

@@ -1,7 +1,7 @@
 # Snakefile
 
 # Load configuration
-configfile: "config/config.yaml"
+configfile: "../config/config.yaml"
 
 # Include the separate rule files
 include: "rules/fasta.smk"

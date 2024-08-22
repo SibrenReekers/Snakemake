@@ -8,10 +8,8 @@ rule get_fastq_pe_gz:
     params:
         extra="--skip-technical"
     threads: config['threads_index']
-    conda:
-        "../envs/env.yaml"
     wrapper:
-        "v3.5.3/bio/sra-tools/fasterq-dump"
+        "v4.1.1/bio/sra-tools/fasterq-dump"
 
 # Rule for running FastQC on the downloaded FASTQ files
 rule run_fastqc:
@@ -25,7 +23,5 @@ rule run_fastqc:
     threads: config['threads_index']
     resources:
         mem_mb=1024
-    conda:
-        "../envs/env.yaml"
     wrapper:
-        "v3.5.3/bio/fastqc"
+        "v4.1.1/bio/fastqc"

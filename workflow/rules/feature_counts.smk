@@ -4,19 +4,14 @@ rule run_featurecounts:
         samples="aligned/{sample}/{sample}_aligned.bam",
         annotation=config['gtf_annotation']
     output:
-        multiext(
-            "counts/{sample}/{sample}",
-            ".featureCounts",
-            ".featureCounts.summary",
-            ".featureCounts.jcounts"
-        )
+        counts="counts/{sample}/{sample}.featureCounts",
+        summary="counts/{sample}/{sample}.featureCounts.summary",
+        jcounts="counts/{sample}/{sample}.featureCounts.jcounts"
     log:
         "logs/featurecounts/{sample}.log"
     params:
         strand="0",
-        extra="-O --fracOverlap 0.2 -J -p"  
+        extra="-O --fracOverlap 0.2 -J -p"
     threads: config['threads_index']
-    conda:
-        "../envs/env.yaml"
     wrapper:
-        "v3.13.1/bio/subread/featurecounts"
+        "v4.1.1/bio/subread/featurecounts"
