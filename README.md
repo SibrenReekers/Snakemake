@@ -67,13 +67,15 @@ As a quick note the pipeline takes a accesion number as input, on the current co
 3. **Install Snakemake:**
 
     ```sh
-    conda install -c bioconda snakemake
+    conda install -c conda-forge -c bioconda snakemake=7.0.0
     ```
 
-4. **Install packages:**
+4. **Downgrade tabulate:**
+
+The newest version of tabulate that comes with snakemake 7.0.0 was a bit buggy. For now downgrading to a earlier tabulate version seems to have solved the problem.
 
     ```sh
-    conda install -c bioconda snakemake-wrapper-utils fastqc star sra-tools
+    pip install tabulate==0.8.9
     ```
     
 5. **Configure the `config.yaml` file:**
