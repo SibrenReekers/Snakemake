@@ -1,0 +1,55 @@
+
+        ==========     _____ _    _ ____  _____  ______          _____  
+        =====         / ____| |  | |  _ \|  __ \|  ____|   /\   |  __ \ 
+          =====      | (___ | |  | | |_) | |__) | |__     /  \  | |  | |
+            ====      \___ \| |  | |  _ <|  _  /|  __|   / /\ \ | |  | |
+              ====    ____) | |__| | |_) | | \ \| |____ / ____ \| |__| |
+        ==========   |_____/ \____/|____/|_|  \_\______/_/    \_\_____/
+	  v2.0.6
+
+//========================== featureCounts setting ===========================\\
+||                                                                            ||
+||             Input files : 1 BAM file                                       ||
+||                                                                            ||
+||                           SRR13442908_aligned.bam                          ||
+||                                                                            ||
+||             Output file : SRR13442908.featureCounts                        ||
+||                 Summary : SRR13442908.featureCounts.summary                ||
+||              Paired-end : yes                                              ||
+||        Count read pairs : no                                               ||
+||              Annotation : gencode.v38.annotation.gtf (GTF)                 ||
+||      Dir for temp files : /tmp/tmp6fgqw8g4                                 ||
+||       Junction Counting : <output_file>.jcounts                            ||
+||                                                                            ||
+||                 Threads : 4                                                ||
+||                   Level : meta-feature level                               ||
+||      Multimapping reads : not counted                                      ||
+|| Multi-overlapping reads : counted                                          ||
+||   Min overlapping bases : 1                                                ||
+||   Min overlapping frac. : 20.0% to reads                                   ||
+||                                                                            ||
+\\============================================================================//
+
+//================================= Running ==================================\\
+||                                                                            ||
+|| Load annotation file gencode.v38.annotation.gtf ...                        ||
+||    Features : 1499012                                                      ||
+||    Meta-features : 60649                                                   ||
+||    Chromosomes/contigs : 25                                                ||
+||                                                                            ||
+|| Process BAM file SRR13442908_aligned.bam...                                ||
+||    Paired-end reads are included.                                          ||
+||    The reads are assigned on the single-end mode.                          ||
+||    Total alignments : 31911114                                             ||
+||    Successfully assigned alignments : 19281343 (60.4%)                     ||
+||    Running time : 0.33 minutes                                             ||
+||                                                                            ||
+|| Write the final count table.                                               ||
+|| Write the junction count table.                                            ||
+|| Write the read assignment summary.                                         ||
+||                                                                            ||
+|| Summary of counting results can be found in file "counts/SRR13442908/SRR1  ||
+|| 3442908.featureCounts.summary"                                             ||
+||                                                                            ||
+\\============================================================================//
+

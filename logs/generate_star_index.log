@@ -1,0 +1,17 @@
+	/students/2023-2024/Thema11/shbreekers_snakemake/Snakemake/.snakemake/conda/0ef1c6c2b9317e9c6d0243b5763c923e/bin/STAR-avx --runThreadN 4 --runMode genomeGenerate --genomeFastaFiles data/refs/GRCh38.p13.genome.fa --sjdbGTFfile data/refs/gencode.v38.annotation.gtf --outTmpDir /tmp/tmp5xzvrjte/STARtmp --genomeDir data/refs/star_index/Genome
+	STAR version: 2.7.11b   compiled: 2024-07-03T14:41:31+0000 :/opt/conda/conda-bld/star_1720017372352/work/source
+Aug 25 17:03:23 ..... started STAR run
+Aug 25 17:03:23 ... starting to generate Genome files
+Aug 25 17:04:31 ..... processing annotations GTF
+Aug 25 17:05:20 ... starting to sort Suffix Array. This may take a long time...
+Aug 25 17:05:34 ... sorting Suffix Array chunks and saving them to disk...
+Aug 25 18:41:05 ... loading chunks from disk, packing SA...
+Aug 25 18:49:26 ... finished generating suffix array
+Aug 25 18:49:26 ... generating Suffix Array index
+Aug 25 18:53:26 ... completed Suffix Array index
+Aug 25 18:53:27 ..... inserting junctions into the genome indices
+Aug 25 18:59:10 ... writing Genome to disk ...
+Aug 25 18:59:41 ... writing Suffix Array to disk ...
+Aug 25 19:03:28 ... writing SAindex to disk
+Aug 25 19:03:45 ..... finished successfully
+   
