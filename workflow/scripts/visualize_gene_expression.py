@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+"""
+This script creates a bar plot visualisation of the top 10 most expressed genes.
+It loops through the counts file generated with the snakemake pipeline, filters out any very low gene counts
+and gets the mean of the higher ones. The top ten most expressed genes will be selected and plot as a bar plot.
+"""
+
+__author__ = "Sibren Reekers"
+__version__ = "1.0.0"
+__date__ = "2024-aug-27"
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns

@@ -13,4 +13,14 @@ include: "rules/visualization.smk"
 # Targets
 rule all:
     input:
+        # expand("FastQC/{sample}_{read}_fastqc.html", sample=config['accession'], read=['1', '2']),
+        # expand("FastQC/{sample}_{read}_fastqc.zip", sample=config['accession'], read=['1', '2']),
+        # expand("aligned/{sample}/{sample}_aligned.bam", sample=config['accession']),
+        # expand("logs/star/{sample}/Log.final.out", sample=config['accession']),
+        # expand("aligned/{sample}/SJ.out.tab", sample=config['accession']),
+        # expand("aligned/{sample}/unmapped_1.fastq.gz", sample=config['accession']),
+        # expand("aligned/{sample}/unmapped_2.fastq.gz", sample=config['accession']),
+        # expand("counts/{sample}/{sample}.featureCounts", sample=config['accession']),
+        # expand("counts/{sample}/{sample}.featureCounts.summary", sample=config['accession']),
+        # expand("counts/{sample}/{sample}.featureCounts.jcounts", sample=config['accession']),
         "plots/gene_expression_barplot.png"
