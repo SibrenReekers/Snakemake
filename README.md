@@ -42,10 +42,18 @@ As a quick note the pipeline takes a accesion number as input, on the current co
 ### Packages
 - `python==3.10.14`
 - `conda==24.1.2`
-- `matplotlib`
-- `seaborn`
-- `pandas`
-- `numpy`
+- `matplotlib==3.7.2`
+- `seaborn==0.13.2`
+- `pandas==2.0.3`
+- `numpy==1.24.3`
+
+### Snakemake
+This pipeline has been recreated using [Snakemake](https://snakemake.github.io/). Snakemake is a workflow management system that is mainly used in bio-informatics. With snakemake a users who isnt very familiar with python can build or rebuild analyis pipelines. The desired result and different steps will be located in the snakefile. This is the main file that refulates the output of the pipeline.
+
+### Conda
+[Conda](https://docs.conda.io/en/latest/) is a package and environment manager which makes managing a project dependencies a lot cleaner. For each project a new environment can be created in which only the required packages can be installed. This makes, for example switching between different python versions a lot easier.
+
+The desired tools can be put in the env.yaml file and when the tool runs an environment will automaticly be created using the given packages.
 
 ## Setting Up the Workspace
 
@@ -69,11 +77,11 @@ As a quick note the pipeline takes a accesion number as input, on the current co
 
 4. **Downgrade tabulate:**
 
-The newest version of tabulate that comes with snakemake 7.0.0 was a bit buggy. For now downgrading to a earlier tabulate version seems to have solved the problem.
-
     ```sh
     pip install tabulate==0.8.9
     ```
+
+    The newest version of tabulate that comes with snakemake 7.0.0 was a bit buggy. For now downgrading to a earlier tabulate version seems to have solved the problem.
     
 5. **Configure the `config.yaml` file:**
 
@@ -90,20 +98,23 @@ snakemake -c <number_of_cores> --use-conda --conda-frontend conda
 ![Workflow DAG](dag.png)
 
 ## Example output
-Because of how timeconsuming this pipeline can be it is currently set up to use one sample.
+Because of how timeconsuming this pipeline can be it is currently set up to use one sample. Other samples that have been used in the original project are located in the sra_ids.txt file. When you want to run the pipeline with multiple samples these have to be added in the config.yaml file under accession.
 
 ```sh
 accession: 
   - SRR13442908
+  - Other IDs...
 ```
 
 ![Gene expression barplot](plots/gene_expression_barplot.png)
 
 ## Troubleshooting
 
-In case of any erros please contact:
+The main problem that can occur is outdated wrapper version. After sometime not only snakemake will be updated but also the different wrappers that have been used. The used wrapper version has to be compatible with the used snakemake version!
+
+In case of any other erros please contact:
 - Sibren Reekers
-- [email](sibrenreekers@gmail.com)
+- [email](mailto:sibrenreekers@gmail.com)
 - [github](https://github.com/SibrenReekers)
 
 
