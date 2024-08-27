@@ -4,8 +4,6 @@ rule decompress_fastq:
         "data/pe/{sample}_{read}.fastq.gz"
     output:
         "data/pe/{sample}_{read}.fastq"
-    conda:
-        "../envs/env.yaml"
     shell:
         "gunzip -c {input} > {output}"
 

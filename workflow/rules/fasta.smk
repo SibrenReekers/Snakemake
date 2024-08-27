@@ -21,7 +21,6 @@ rule run_fastqc:
     log:
         "logs/fastqc/{sample}_{read}_fastqc.log"
     threads: config['threads_index']
-    resources:
-        mem_mb=1024
+    resources: config['mem_mb']
     wrapper:
         "v4.1.1/bio/fastqc"
