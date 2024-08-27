@@ -40,15 +40,12 @@ As a quick note the pipeline takes a accesion number as input, on the current co
 10. Visualizes gene expression data by creating a bar plot of gene expression counts.
 
 ### Packages
-- `python`
+- `python==3.10.14`
+- `conda==24.1.2`
 - `matplotlib`
 - `seaborn`
 - `pandas`
 - `numpy`
-- `sra-tools`
-- `fastqc`
-- `star`
-- `subread`
 
 ## Setting Up the Workspace
 
